@@ -1,0 +1,143 @@
+.card_img{
+    width: calc(100% - 40px) !important;
+    max-width: 10rem !important;
+    height: auto;
+    width: auto;
+    margin: 20px;
+
+}
+.Comment{
+    border-radius: 40px;
+    background-color: #FFF;
+    border: 1px solid #F2F2F2;
+    text-align: center;
+    margin: 10%;
+}
+.Comment:hover{
+    background-color: #00695B;
+    color: #FFF;
+}
+.Comment p{
+    margin: 20px 30px;
+}
+.card-wrapper{
+    margin: auto 8rem;
+}
+
+.popup{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,105,91,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.popup-content{
+    background-color: white;
+    width: 80%;
+    max-width: 500px;
+    padding: 30px 10px;
+    border-radius: 40px;
+    text-align: center;
+
+}
+
+.popup-content img{
+    width: calc(100% - 40px) !important;
+    max-width: 10rem !important;
+    height: auto;
+    width: auto;
+    display: block;
+    margin: auto;
+}
+.popup-content button{
+    color: #ffff;
+    background-color: #00695B;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.popup-content button:hover{
+    color: #00695B;
+    background-color: #ffff;
+    border: 1px solid #00695B;
+}
+.priceCard__container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.closeButtom:hover{
+    border: 2px solid #00695B !important;
+}
+.priceCard{
+    background-color: #00695B;
+    margin: 10px 10px;
+    padding: 10px;
+    width: 100%;
+    max-width: 100px;
+    border-radius: 20px;
+    color: white;
+}
+.priceCard h3{
+    margin: 10px;
+}
+.priceCard button{
+    padding: 5px 10px;
+}
+.closeButtom{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #FFF !important;
+    border-radius: 50px !important;
+    color: #00695B !important;
+    padding: 0px !important;
+    width: 30px !important;
+    height: 30px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    border: 2px solid transparent !important;
+}
+@media screen and (max-width:996px) {
+    .card-wrapper{
+        margin: auto 1rem;
+    }
+}
+@media screen and (max-width:600px) {
+    .card-wrapper{
+        margin: auto 0rem;
+    }
+}
+@media screen and (max-width:525px) {
+    .priceCard{
+        margin: 5px auto;
+        padding: 5px;
+    }
+    .priceCard h3{
+        margin: 5px;
+        font-size: small;
+    }
+    .priceCard p{
+        font-size: small;
+    }
+    .priceCard button{
+        padding: 5px 5px;
+        font-size: x-small !important;
+    }
+    .closeButtom{
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        width: 20px !important;
+        height: 20px !important;
+    }
+    .closeIcon{
+        font-size: small !important;
+    }
+}

@@ -1,0 +1,15 @@
+.Navbar{
+    display: flex;
+    background-color: #00695B;
+    justify-content: space-between;
+}
+.navbar_logo img{
+    height: 60px;
+}
+ul{
+    display: flex;
+    /* padding: auto 10px; */
+}
+ul li{
+    padding: 10px 10px !important;
+ }

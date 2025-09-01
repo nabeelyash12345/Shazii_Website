@@ -1,0 +1,43 @@
+.card_img{
+    width: calc(100% - 40px) !important;
+    max-width: 10rem !important;
+    height: auto;
+    width: auto;
+    margin: 20px;
+
+}
+.Comment{
+    border-radius: 40px;
+    background-color: #FFF;
+    border: 1px solid #F2F2F2;
+    text-align: center;
+    margin: 10%;
+    padding: 20px;
+}
+.Comment:hover{
+    background-color: #00695B;
+    color: #FFF;
+}
+.Comment p{
+    margin: 20px 30px;
+}
+.card-wrapper{
+    margin: auto 8rem;
+}
+@media screen and (max-width:996px) {
+    .card-wrapper{
+        margin: auto 1rem;
+    }
+}
+@media screen and (max-width:600px) {
+    .card-wrapper{
+        margin: auto 0rem;
+    }
+}
+.btn_tv{
+    padding: 10px 20px;
+    border-radius: 60px;
+    border: none;
+    background-color: #E71E1C;
+    color: #FFF;
+}

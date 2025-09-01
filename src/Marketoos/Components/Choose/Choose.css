@@ -1,0 +1,43 @@
+.choose_img{
+    width: calc(100% - 40px) !important;
+    max-width: 10rem !important;
+    height: auto;
+    width: auto;
+    margin: 20px;
+
+}
+.heading{
+    font-size: 48px;
+    text-align: center;
+}
+.Choose{
+    border-radius: 40px;
+    background-color: #FFF;
+    border: 1px solid #F2F2F2;
+    text-align: center;
+    margin: 10%;
+    box-shadow: 0px -25px 20px -20px #F2F2F2,
+25px 0px 20px -20px #F2F2F2,
+0px 25px 20px -20px #F2F2F2,
+-25px 0px 20px -20px #F2F2F2;
+}
+
+.Choose p{
+    margin: 20px 30px;
+}
+.card-wrapper{
+    margin: auto 8rem;
+}
+@media screen and (max-width:996px) {
+    .card-wrapper{
+        margin: auto 1rem;
+    }
+}
+@media screen and (max-width:600px) {
+    .card-wrapper{
+        margin: auto 0rem;
+    }
+}
+.card_img1 img{
+
+}

@@ -1,0 +1,40 @@
+.gird-container{
+    box-shadow: none;
+    /* margin-left: 20px/; */
+}
+.main{
+    box-shadow: none;
+}   
+.main-para{
+    max-width: 100%;
+}
+.responsivee-img{
+    height: auto !important;
+    max-width: 100%;
+}
+.main-container{
+    margin-top: 90px;
+}
+.css-1633um2-MuiPaper-root{
+    box-shadow: none !important;
+}
+.btn_main{
+    border-radius: 28px !important;
+    background-color: #00695B !important;
+    color: #ffff !important;
+    width: 160px;
+    height: 50px;
+}
+.Card_container{
+    background-color: #ECE9E9;
+    width: 100%;
+}
+
+@media screen and (max-width : 565px){
+    .gird-container{
+        margin: auto 10px !important;
+    }
+    .gird-container .main-heading{
+        font-size: 30px !important;
+    }
+}
