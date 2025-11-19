@@ -1,145 +1,27 @@
-// // import * as React from 'react';
-// // import { styled } from '@mui/material/styles';
-// // import Box from '@mui/material/Box';
-// // import Paper from '@mui/material/Paper';
-// // import Grid from '@mui/material/Unstable_Grid2';
-// // import { Typography, Button } from '@mui/material';
+import React, { useState } from "react";
+import {
+  Menu,
+  X,
+  Facebook,
+  Twitter,
+  Instagram,
+  Youtube,
+  Send,
+} from "lucide-react";
+import haaderImg from "../../Assets/header.png";
+import BgImage from "../../Assets/bgimage.png";
+import MainCard from "../ItemCard/ItemCard";
+import logo from "../../Assets/logo.png";
+import project from "../../Assets/Project.png";
+
+import { TeamSection } from "../ItemCard/team-section";
+import ImageGrid from "../ItemCard/ImageGrid";
+import { AboutUs } from "../ItemCard/about-us";
+import WhatWeDo from "../ItemCard/what-we-do";
+import ClientTestimony from "../ItemCard/client-testimony";
+import Footer from "../ItemCard/footer";
 
 
-
-
-// // import'./Hero.css';
-// // import mian from'../../Assets/main.png'
-// // import MainCard from '../ItemCard/ItemCard';
-// // import Navabr from './../Navbar/Nav';
-// // import Footer from './../Footer/Footer'
-
-// // const Item = styled(Paper)(({ theme }) => ({
-// //   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-// //   ...theme.typography.body2,
-// //   padding: theme.spacing(1),
-// //   textAlign: 'center',
-// //   color: theme.palette.text.secondary,
-// // }));
-// // function Hero() {
-// //   return (
-// //    <>
-// //       <Navabr />
-// //        <Box sx={{ flexGrow: 1 }}>
-// //       <Grid container spacing={2} >
-// //         <Grid xs={12} sm={12} md={12} lg={6} className="gird-container">
-// //           <Item className='main-container'>
-// //            <div style={{margin: 'auto 70px'}}  className="gird-container">
-// //               <Typography className="main-heading" variant='h3' style={{ fontWeight: "300", textAlign: "left", marginTop: '20' }}>
-// //                 A Digital and Daily life
-// //                 using Product Agency
-// //               </Typography>
-// //               <Typography variant="body1"className='main-para' paragraph sx={{ textAlign: 'left', margin: '30px auto' }}>
-// //                 Leading digital agency with solid design and development expertise. We build readymade websites, mobile applications, and elaborate online  business services.
-// //               </Typography>
-// //             <div style={{ textAlign: 'left' }}>
-// //                 <Button className='btn_main'>
-// //                     Click Me
-// //                 </Button>
-// //             </div>
-// //            </div>
-// //           </Item>
-// //         </Grid>
-// //         <Grid xs={12} sm={12} md={12} lg={6}>
-// //          <img src={mian} alt='img' className='responsivee-img' />
-// //         </Grid>
-        
-// //       </Grid>
-// //     </Box>
-// //    <Box>
-// //       <div className='Card_container'>
-// //         <MainCard />
-// //       </div>
-// //       <div>
-// //         <Footer />
-// //       </div>
-// //    </Box>
-// //    </>
-
-
-// //   );
-// // }
-
-// // export default Hero;
-
-// import * as React from 'react';
-// import { Box } from '@mui/material';
-
-// import './Hero.css';
-// import Navabr from './../Navbar/Nav';
-// import Footer from './../Footer/Footer';
-// import MainCard from '../ItemCard/ItemCard';
-
-// import headerImg from '../../Assets/header.png';
-
-// function Hero() {
-//   return (
-//     <>
-//         <nav className="navbar">
-//       {/* Logo */}
-//       <div className="navbar_logo">
-//         <img src={logo} alt="Shazii Enterprises Logo" />
-//       </div>
-
-//       {/* Hamburger Icon */}
-//       <div className="hamburger" onClick={toggleMenu}>
-//         <span className={isOpen ? "line open" : "line"}></span>
-//         <span className={isOpen ? "line open" : "line"}></span>
-//         <span className={isOpen ? "line open" : "line"}></span>
-//       </div>
-
-//       {/* Navigation Links */}
-//       <ul className={`navbar_links ${isOpen ? "open" : ""}`}>
-//         <li>
-//           <NavLink to="/" onClick={toggleMenu}>Home</NavLink>
-//         </li>
-//         <li>
-//           <NavLink to="/services" onClick={toggleMenu}>Services</NavLink>
-//         </li>
-//         <li>
-//           <NavLink to="/showroom" onClick={toggleMenu}>Showroom</NavLink>
-//         </li>
-//         <li>
-//           <NavLink to="/about" onClick={toggleMenu}>About Us</NavLink>
-//         </li>
-//         <li>
-//           <NavLink to="/contact" onClick={toggleMenu}>Contact Us</NavLink>
-//         </li>
-//       </ul>
-//     </nav>
-      
-//       {/* Hero Section */}
-//       <Box sx={{ flexGrow: 1 }}>
-//         <div className="hero-container">
-//           <img src={headerImg} alt="Shazii Enterprises Hero" className="hero-image" />
-//         </div>
-//       </Box>
-
-//       {/* Below Hero Sections */}
-//       <Box>
-//         <div className="Card_container">
-//           <MainCard />
-//         </div>
-//         <div>
-//           <Footer />
-//         </div>
-//       </Box>
-//     </>
-//   );
-// }
-
-// export default Hero;
-import React, { useState } from 'react';
-import { Menu, X, Facebook, Twitter, Instagram, Youtube, Send } from 'lucide-react';
-import haaderImg from '../../Assets/header.png';
-import './Hero.css'; // Import CSS
-
-import MainCard from '../ItemCard/ItemCard';
 
 function Hero() {
   const [isOpen, setIsOpen] = useState(false);
@@ -151,74 +33,185 @@ function Hero() {
   return (
     <>
       {/* Navbar */}
-      <nav className="navbar">
+      <nav className="flex items-center justify-between px-6 py-4 fixed w-full top-0 z-50 ">
         {/* Logo */}
-        <div className="logo-container">
-          <div className="logo-icon">SE</div>
-          <span className="logo-text">SHAZII ENTERPRISES</span>
+        <div className="flex items-center">
+          <div className=" h-10">
+            <img
+              src={logo}
+              alt="Shazii Enterprises Logo"
+              className="w-full h-full object-cover rounded-full"
+            />
+          </div>
         </div>
-
         {/* Desktop Navigation */}
-        <ul className="nav-links-desktop">
-          <li><a href="/" className="nav-link">Home</a></li>
-          <li><a href="/services" className="nav-link">Services</a></li>
-          <li><a href="/showroom" className="nav-link">Showroom</a></li>
-          <li><a href="/about" className="nav-link">About Us</a></li>
-          <li><a href="/contact" className="nav-link">Contact Us</a></li>
+        <ul className="hidden md:flex space-x-10 text-white font-medium">
+          <li>
+            <a
+              href="/"
+              className="hover:bg-black/40 px-3 py-1 rounded transition"
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="/services" className="hover:text-pink-500 transition">
+              Services
+            </a>
+          </li>
+
+          <li>
+            <a href="/about" className="hover:text-pink-500 transition">
+              About Us
+            </a>
+          </li>
+          <li>
+            <a href="/contact" className="hover:text-pink-500 transition">
+              Contact Us
+            </a>
+          </li>
         </ul>
 
         {/* Hamburger */}
-        <button 
+        <button
           onClick={toggleMenu}
-          className="hamburger-button"
+          className="md:hidden focus:outline-none"
           aria-label="Toggle menu"
         >
-          {isOpen ? <X size={28} color="#333" /> : <Menu size={28} color="#333" />}
+          {isOpen ? <X size={28} color="#fff" /> : <Menu size={28} color="#fff" />}
         </button>
       </nav>
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="mobile-menu">
-          <a href="/" onClick={toggleMenu} className="mobile-link">Home</a>
-          <a href="/services" onClick={toggleMenu} className="mobile-link">Services</a>
-          <a href="/showroom" onClick={toggleMenu} className="mobile-link">Showroom</a>
-          <a href="/about" onClick={toggleMenu} className="mobile-link">About Us</a>
-          <a href="/contact" onClick={toggleMenu} className="mobile-link">Contact Us</a>
+        <div className="absolute top-16 left-0 w-full bg-black/70 backdrop-blur-sm flex flex-col items-center py-4 space-y-4 md:hidden z-40">
+          <a
+            href="/"
+            onClick={toggleMenu}
+            className="text-white hover:text-pink-500 transition"
+          >
+            Home
+          </a>
+          <a
+            href="/services"
+            onClick={toggleMenu}
+            className="text-white hover:text-pink-500 transition"
+          >
+            Services
+          </a>
+          <a
+            href="/showroom"
+            onClick={toggleMenu}
+            className="text-white hover:text-pink-500 transition"
+          >
+            Showroom
+          </a>
+          <a
+            href="/about"
+            onClick={toggleMenu}
+            className="text-white hover:text-pink-500 transition"
+          >
+            About Us
+          </a>
+          <a
+            href="/contact"
+            onClick={toggleMenu}
+            className="text-white hover:text-pink-500 transition"
+          >
+            Contact Us
+          </a>
         </div>
       )}
 
       {/* Hero Section */}
-      <div className="hero-section">
-        <div className="hero-overlay"></div>
+      {/* Hero Section */}
+      {/* Hero Section */}
+      {/* Hero Section */}
+      <div
+        className="relative flex flex-col md:flex-row items-center justify-between px-8 md:px-16 pt-32 pb-16 min-h-screen bg-cover bg-center"
+        style={{ backgroundImage: `url(${BgImage})` }}
+      >
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
 
-        <div className="hero-content">
-          <div className="hero-text">
-            <h1 className="hero-title">SHAZII ENTERPRISES</h1>
-            <p className="hero-subtitle">Our Business is to bring smile on your face</p>
-
-            <div className="social-container">
-              <a href="#facebook" className="social-icon"><Facebook size={20} /></a>
-              <a href="#twitter" className="social-icon"><Twitter size={20} /></a>
-              <a href="#instagram" className="social-icon"><Instagram size={20} /></a>
-              <a href="#youtube" className="social-icon"><Youtube size={20} /></a>
-              <a href="#telegram" className="social-icon"><Send size={20} /></a>
-            </div>
+        {/* Content */}
+        <div className="relative z-10 flex flex-col items-start md:w-1/2 space-y-4">
+          <div className="bg-black/30 p-4 rounded-lg">
+            <h1 className="text-4xl md:text-5xl font-extrabold text-white">
+              SHAZII ENTERPRISES
+            </h1>
+            <p className="text-lg text-white/90">
+              Our Business is to bring smile on your face
+            </p>
           </div>
+        </div>
 
-          <div className="hero-image-container">
-            <img src={haaderImg} alt="Shazii Enterprises Team" className="hero-image" />
-          </div>
+        {/* Hero Image */}
+        <div className="relative z-10 mt-10 md:mt-0 md:w-1/2 flex justify-center">
+          <img
+            src={haaderImg}
+            alt="Shazii Enterprises Team"
+            className="w-[90%] max-w-lg rounded-3xl shadow-[ -8px_-8px_20px_rgba(255,255,255,0.8),_8px_8px_20px_rgba(0,0,0,0.1)]"
+          />
+        </div>
+
+        {/* Social Icons at the bottom of background */}
+        <div className="absolute bottom-10 left-40 transform -translate-x-1/2 flex space-x-4 z-20">
+          <a href="#facebook" className="p-2 bg-white rounded-full shadow-md hover:bg-pink-100 transition">
+            <Facebook size={20} />
+          </a>
+          <a href="#twitter" className="p-2 bg-white rounded-full shadow-md hover:bg-pink-100 transition">
+            <Twitter size={20} />
+          </a>
+          <a href="#instagram" className="p-2 bg-white rounded-full shadow-md hover:bg-pink-100 transition">
+            <Instagram size={20} />
+          </a>
+          <a href="#youtube" className="p-2 bg-white rounded-full shadow-md hover:bg-pink-100 transition">
+            <Youtube size={20} />
+          </a>
+          <a href="#telegram" className="p-2 bg-white rounded-full shadow-md hover:bg-pink-100 transition">
+            <Send size={20} />
+          </a>
         </div>
       </div>
 
-      {/* Placeholder sections */}
-      <div className="content-section">
-          <div>
-            <MainCard />
-          </div>
-        <div className="placeholder"><p>Footer Component Section</p></div>
+
+
+
+
+      {/* Main Card Section */}
+      <div className="">
+        <MainCard />
       </div>
+      <TeamSection />
+      <div className="max-w-7xl mx-auto">
+        <div className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Check Our Recent Project</h2>
+          <p className="text-gray-600 leading-relaxed max-w-3xl">
+At Shazii Enterprise, we take pride in delivering successful projects across multiple industries. From construction and fashion to event management and marketing, our expertise ensures excellence in every project we undertake. Here are some of our latest achievements:
+          </p>
+        </div>
+        <div
+          className="  min-h-screen bg-cover bg-center"
+          style={{ backgroundImage: `url(${project})` }}
+        ></div>
+
+        <div className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4 mt-12">Service  Selection Process</h2>
+          <p className="text-gray-600 leading-relaxed max-w-3xl">
+At Shazii Enterprise, we ensure a seamless and efficient process for our clients to choose and avail our services. Follow these easy steps to get started:
+          </p>
+        </div>
+
+        <ImageGrid />
+        <AboutUs />
+        <WhatWeDo />
+        <ClientTestimony />
+
+      </div>
+
+      <Footer />
+
     </>
   );
 }

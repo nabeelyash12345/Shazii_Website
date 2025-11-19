@@ -1,231 +1,135 @@
-// import React, { useState } from 'react';
-// import Card from './itemCardData';
-// import Popup from './itemCardPopup';
+import { GradientCard } from "./gradient-card"
+import tiles from '../../Assets/tiles.png'
+import event from '../../Assets/event.png'
+import Fashion from '../../Assets/ssss.png'
+import Donate from '../../Assets/Do.png'
+import Marketos from '../../Assets/market.png'
+import   Fruitain  from '../../Assets/Do.png'
+import  st from '../../Assets/st.png'
+import Cleantroo  from '../../Assets/cleantroo.png'
+import AbooraChai   from '../../Assets/cup.png'
+import Universal  from '../../Assets/store.png'
+import Digital from '../../Assets/DigitalMenu.png'
 
 
 
 
-// import Box from '@mui/material/Box';
-// import Grid from '@mui/material/Grid';
-
-// const MainCard = () => {
-//   const [selectedCard, setSelectedCard] = useState(null);
-
-//   const cardData = [
-//     {
-//         id: 1,
-//         title: 'Transport senira',
-//         image: 'https://i.ibb.co/h1dQ3j3/2.png',
-//         description: 'We present you a proposal and discuss niffty-gritty like',
-//         priceTitle1: "Price",
-//         priceDesc1: "8x6x12",
-//         priceButton1: "Order Now",
-//         priceTitle2: "Price",
-//         priceDesc2: "8x6x12",
-//         priceButton2: "Order Now",
-//         priceTitle3: "Price",
-//         priceDesc3: "8x6x12",
-//         priceButton3: "Order Now",
-//     },
-//     {
-//         id: 2,
-//         title: 'Lobour',
-//         image: 'https://i.ibb.co/CWSWfJq/3.png',
-//         description: 'We present you a proposal and discuss niffty-gritty like',
-//         priceTitle1: "Price",
-//         priceDesc1: "8x6x12",
-//         priceButton1: "Order Now",
-//         priceTitle2: "Price",
-//         priceDesc2: "8x6x12",
-//         priceButton2: "Order Now",
-//         priceTitle3: "Price",
-//         priceDesc3: "8x6x12",
-//         priceButton3: "Order Now",
-//       },
-//       {
-//         id: 3,
-//         title: 'Tuff Tiles',
-//         image: 'https://i.ibb.co/tZdG8DH/4.png',
-//         description: 'We present you a proposal and discuss niffty-gritty like',
-//         priceTitle1: "Price",
-//         priceDesc1: "8x6x12",
-//         priceButton1: "Order Now",
-//         priceTitle2: "Price",
-//         priceDesc2: "8x6x12",
-//         priceButton2: "Order Now",
-//         priceTitle3: "Price",
-//         priceDesc3: "8x6x12",
-//         priceButton3: "Order Now",
-//       },
-//       {
-//         id: 4,
-//         title: 'Flowerpot',
-//         image: 'https://i.ibb.co/HghZnsZ/5.png',
-//         description: 'We present you a proposal and discuss niffty-gritty like',
-//         priceTitle1: "Price",
-//         priceDesc1: "8x6x12",
-//         priceButton1: "Order Now",
-//         priceTitle2: "Price",
-//         priceDesc2: "8x6x12",
-//         priceButton2: "Order Now",
-//         priceTitle3: "Price",
-//         priceDesc3: "8x6x12",
-//         priceButton3: "Order Now",
-//       },
-//       {
-//         id: 5,
-//         title: 'J&S Son',
-//         image: 'https://i.ibb.co/G7FPf67/profile.png',
-//         description: 'We present you a proposal and discuss niffty-gritty like',
-//         priceTitle1: "Price",
-//         priceDesc1: "8x6x12",
-//         priceButton1: "Order Now",
-//         priceTitle2: "Price",
-//         priceDesc2: "8x6x12",
-//         priceButton2: "Order Now",
-//         priceTitle3: "Price",
-//         priceDesc3: "8x6x12",
-//         priceButton3: "Order Now",
-//       },
-//       {
-//         id: 6,
-//         title: 'Gate Flower',
-//         image: 'https://i.ibb.co/tZdG8DH/4.png',
-//         description: 'We present you a proposal and discuss niffty-gritty like',
-//         priceTitle1: "Price",
-//         priceDesc1: "8x6x12",
-//         priceButton1: "Order Now",
-//         priceTitle2: "Price",
-//         priceDesc2: "8x6x12",
-//         priceButton2: "Order Now",
-//         priceTitle3: "Price",
-//         priceDesc3: "8x6x12",
-//         priceButton3: "Order Now",
-//       },
-//     // Add data for the other 4 cards
-//   ];
-
-//   const openPopup = (cardData) => {
-//     setSelectedCard(cardData);
-//   };
-
-//   const closePopup = () => {
-//     setSelectedCard(null);
-//   };
-
-//   return (
-//     <>
-//         <Box sx={{ flexGrow: 1 }}>
-        
-//           <div className="main">
-//                 <div className="card-container card-wrapper">
-//               <Grid container spacing={0}>
-//                     {cardData.map((card) => (
-//                         <Grid item lg={4} sm={6} xs={12} md={6}>
-//                             <Card key={card.id} cardData={card} onCardClick={openPopup} />
-//                       </Grid>
-//                     ))}
-//                 </Grid>
-//                 </div>
-
-//             {selectedCard && (
-//                 <Popup cardData={selectedCard} onClose={closePopup} />
-//             )}
-//             </div>
-          
-//       </Box>
-//     </>
-    
-//   );
-// };
-
-// export default MainCard;
-"use client"
-import { useState } from "react"
-import Card from "./itemCardData"
-import ItemCardPopup from "./itemCardPopup"
-import "./itemCard.css"
-
-const data = [
+const cards = [
   {
     id: 1,
-    title: "Jan and sons tile",
-    image: "https://i.ibb.co/G7FPf67/profile.png",
+    icon: tiles,
+    title: "Jan and sons tile ",
     description: "35+ years of experience",
-    subDescription: "85+ Projects Done",
+    Projector:"5k+ Projects Done",
+    gradient: "#FF6B9D, #C06C84",
+    link:"/Services"
   },
   {
     id: 2,
-    title: "Event brightos",
-    image: "https://i.ibb.co/G7FPf67/profile.png",
-    description: "7+ years of experience",
-    subDescription: "25+ Projects Done",
+    icon: event ,
+    title: "Event Elegance",
+    description: "Elevated events",
+    gradient: "#FFD93D, #FEC868",
+     Projector:"5k+ Projects Done",
+    link:"/EventBrightos"
   },
   {
     id: 3,
-    title: "Fashion hands",
-    image: "https://i.ibb.co/G7FPf67/profile.png",
-    description: "35+ years of experience",
-    subDescription: "180+ Project Done",
+    icon: Fashion,
+    title: "Fashion Sounds",
+    description: "Music for style",
+     Projector:"5k+ Projects Done",
+    gradient: "#FF6B6B, #FF8E72",
+    
+    link:"/FashionHands"
   },
+
   {
     id: 4,
-    title: "Donate",
-    image: "https://i.ibb.co/G7FPf67/profile.png",
-    description: "35+ years of experience",
-    subDescription: "150+ Project Done",
+    icon: Donate ,
+    title: "Health & Happiness",
+    description: "Wellness at heart",
+     Projector:"5k+ Projects Done",
+    gradient: "#6BCB77, #4D96FF",
+    link:"/Donate"
   },
   {
     id: 5,
-    title: "Marketos.pk",
-    image: "https://i.ibb.co/G7FPf67/profile.png",
-    description: "35+ years of experience",
-    subDescription: "150+ Project Done",
+    icon: Marketos ,
+    title: "Handcrafted",
+    description: "Artistic creations",
+     Projector:"5k+ Projects Done",
+    gradient: "#8B7355, #D4A574",
   },
   {
     id: 6,
-    title: "Frutian GB",
-    image: "https://i.ibb.co/G7FPf67/profile.png",
-    description: "35+ years of experience",
-    subDescription: "150+ Project Done",
+    icon: Fruitain,
+    title: "Radiance",
+    description: "Beauty essence",
+    Projector:"5k+ Projects Done",
+    gradient: "#A8D8FF, #FFB6C1",
   },
   {
     id: 7,
-    title: "Social Television",
-    image: "https://i.ibb.co/G7FPf67/profile.png",
-    description: "35+ years of experience",
-    subDescription: "150+ Project Done",
+    icon:  st,
+    title: "Social Masterclass",
+    description: "Creative connection",
+     Projector:"5k+ Projects Done",
+    gradient: "#FF4757, #FF6348",
   },
   {
     id: 8,
-    title: "Cleantroo",
-    image: "https://i.ibb.co/G7FPf67/profile.png",
-    description: "35+ years of experience",
-    subDescription: "150+ Project Done",
+    icon: Cleantroo,
+    title: "Global Reach",
+    description: "Worldwide vision",
+     Projector:"5k+ Projects Done",
+    gradient: "#2ED573, #26A69A",
   },
   {
     id: 9,
-    title: "Aboora Chai",
-    image: "https://i.ibb.co/G7FPf67/profile.png",
-    description: "35+ years of experience",
-    subDescription: "150+ Project Done",
+    icon: AbooraChai ,
+    title: "Celebration Mode",
+    description: "Joy moments",
+    gradient: "#FFA502, #FFD93D",
+     Projector:"5k+ Projects Done",
+  },
+  {
+    id: 10,
+    icon: Universal,
+    title: "Infiniti Bliss",
+    description: "Limitless possibilities",
+    Projector:"5k+ Projects Done",
+    gradient: "#845EC2, #D65DB1",
+  },
+  {
+    id: 11,
+    icon: Digital,
+    title: "Digital Nexus",
+    description: "Tech intersection",
+    gradient: "#00D2D3, #928DAB",
+     Projector:"5k+ Projects Done",
   },
 ]
 
-export default function Page() {
-  const [selected, setSelected] = useState(null)
-
+export default function Home() {
   return (
-    <main style={{ display: "flex", justifyContent: "center", padding: "24px 12px" }}>
-      <div className="card-wrapper">
-        <div className="cards-grid">
-          {data.map((c) => (
-            <Card key={c.id} cardData={c} onCardClick={setSelected} />
+    <main className="min-h-screen   py-12 ">
+      <div className="max-w-7xl ">
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 ">
+          {cards.map((card) => (
+            <GradientCard
+              key={card.id}
+              icon={card.icon}
+              title={card.title}
+              description={card.description}
+              gradient={card.gradient}
+              link={card.link}
+              Projector={card.Projector}
+            />
           ))}
         </div>
       </div>
-
-      {selected ? <ItemCardPopup cardData={selected} onClose={() => setSelected(null)} /> : null}
     </main>
   )
 }

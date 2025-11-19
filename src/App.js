@@ -9,6 +9,9 @@ import Services from './Component/Service/Service';
 import Marke from './Component/Marke/Marke';
 import Television from './Tv/Television';
 import Navbar from './Component/Navbar/Nav'
+import EventBrightos from './Tv/Component/EventBrightos/EventBrightos';
+import FashionHands from './Tv/Component/FashionHands/FashionHands';
+import Donate from './Tv/Component/Donate/Donate';
 function App() {
   return (
     <div>
@@ -18,6 +21,15 @@ function App() {
         <Route path='/Services' element={<Services />}/>
         <Route path='/Marke' element={<Marke />}/>
         <Route path='/Television' element={<Television />}/>
+        <Route path='/EventBrightos' element={<EventBrightos />}/>
+        <Route path='/FashionHands' element={<FashionHands />}/>
+        <Route path='/Donate' element={<Donate />}/>
+
+
+
+
+
+     
       </Routes>
      </BrowserRouter>
     </div>

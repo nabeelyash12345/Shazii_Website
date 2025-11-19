@@ -16,6 +16,10 @@ import event from '../../Assets/event.png'
 import marketoo from '../../Assets/marketoo.png'
 import tiles from '../../Assets/tiles.png'
 import tv from '../../Assets/tv.PNG'
+import TUFFTILES from '../../Assets/TUFFTILES 2.png'
+import logo from '../../Assets/Home.png'
+import JansonsTiles from '../ItemCard/jansons-tiles';
+import Footer from '../ItemCard/footer';
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -26,68 +30,57 @@ const Item = styled(Paper)(({ theme }) => ({
   }));
 function Services() {
     return (
-        <div>
+        <div className=' bg-[#F3F3F3]'>
+          <div className='  h-56'>
           <Navbar />
-          <div className='card-wrapper'>
+          </div>
          
-         <Box sx={{ flexGrow: 1, marginTop: '30px' }}>
-         <Grid container spacing={0}>
-           <Grid item lg={4} sm={6} xs={12} md={6}>
-             <ServiceData
-                 imgsrc={clean}
-                 title="Clean Troo"
-                 dec="We present you a proposal and discuss niffty-gritty like"    
-             />
-           </Grid>
-       
-            <Grid item lg={4} sm={6} xs={12} md={6}>
-                  <Link className='link' to="/Marke">
-                    <ServiceData
-                        imgsrc={marketoo}
-                        title="Marketos"
-                        dec="We present you a proposal and discuss niffty-gritty like"    
-                    />
-                  </Link>
-              </Grid>
-     
-           <Grid item lg={4} sm={6} xs={12} md={6}>
-             <ServiceData 
-                 imgsrc={event}
-                 title="Eventhigntos"
-                 dec="We present you a proposal and discuss niffty-gritty like"    
-             />
-           </Grid>
-           <Grid item lg={4} sm={6} xs={12} md={6}>
-             <ServiceData 
-                 imgsrc={tiles}
-                 title="J & S Tile"
-                 dec="We present you a proposal and discuss niffty-gritty like"    
-             />
-           </Grid>
-           <Grid item lg={4} sm={6} xs={12} md={6}>
-            <NavLink to="Television">
+          <section className="w-full  h-64 bg-[#EDF2EE] rounded-3xl shadow-md   flex flex-col md:flex-row items-center justify-between   mx-auto ">
+      {/* Left Side Image */}
+      <div className="flex-1  justify-center mb-6 md:mb-0">
+        <img
+          src={TUFFTILES}
+          alt="Tiles background"
+          className="w-96 h-64 "
+        />
+      </div>
 
-            
-             <ServiceData 
-                 imgsrc={tv}
-                 title="STV"
-                 dec="We present you a proposal and discuss niffty-gritty like"    
-             />
-             </NavLink>
-           </Grid>
-           <Grid item lg={4} sm={6} xs={12} md={6}>
-             <Link to="/Television">
-                <ServiceData 
-                    imgsrc={tv}
-                    title="GB Fruits"
-                    dec="We present you a proposal and discuss niffty-gritty like"    
-                />
-             </Link>
-           </Grid>
-         </Grid>
-       </Box>
-         </div>
+      {/* Center Logo & Company Info */}
+      <div className="flex-1 text-center md:text-left px-4">
+        <div className="flex  flex-row    gap-4 items-center md:items-start">
+          <img
+            src={logo}
+            alt="Jan&Sons Tiles"
+            className="w-16 h-16 object-contain rounded-xl mb-3"
+          />
+          <div>
+          <h2 className="text-[#B66C7A] text-2xl font-semibold">
+            Jan&Sons Tiles <span className="text-[#C4AFAE] text-sm">Sme Pvt. Ltd</span>
+          </h2>
+          <p className="text-gray-500 text-sm mt-1">
+            work with mission to pave your path.
+          </p>
+          </div>
         </div>
+      </div>
+
+      {/* Right Side Services */}
+      <div className="flex-1     md:text-right  md:mt-0">
+        <h3 className="text-[#B66C7A]  text-center text-2xl font-semibold mb-2">Services</h3>
+        <ul className="text-gray-500 text-center text-sm space-y-1">
+          <li>TUFFTILES</li>
+          <li>FLOWER POTS</li>
+          <li>GATE FLOWERS</li>
+          <li>BLOCK</li>
+          <li>HOME DESIGN</li>
+          <li>FACE STONE</li>
+        </ul>
+      </div>
+    </section>
+    <JansonsTiles/>
+<Footer/>
+        </div>
+        
 
     );
   }
