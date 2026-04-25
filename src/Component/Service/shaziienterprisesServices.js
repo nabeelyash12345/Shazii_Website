@@ -6,6 +6,7 @@ import Footer from "../ItemCard/footer";
 import TUFFTILES from "../../Assets/TUFFTILES 2.png";
 import logo from "../../Assets/Home.png";
 import MainCard from "../ItemCard/ItemCard";
+import logo1 from "../../Assets/logo.png"
 
 function ShaziienterprisesServices() {
   return (
@@ -23,7 +24,9 @@ function ShaziienterprisesServices() {
         {/* LEFT */}
         <div className="text-center md:text-left">
           <div className="flex items-center gap-2 justify-center md:justify-start mb-2">
-            <div className="w-10 h-6 bg-white rounded-sm"></div>
+              <div className="navbar_logo">
+            <img src={logo1} alt="Shazii Enterprises Logo" className="w-28 h-auto" />
+          </div>
             <span className="text-xs">SHAZI ENTERPRISES</span>
           </div>
 
@@ -67,6 +70,16 @@ function ShaziienterprisesServices() {
       </div>
 
     </div>
+     
+        <h3 className=" text-black    text-4xl  ml-20 mt-16">
+            Our Services
+        </h3>
+         <h1 className=" text-black    text-1xl  ml-20 ">
+           
+At Shazii Enterprise, we offer a wide range of high-quality services across multiple industries, ensuring excellence and customer satisfaction in every project.
+        </h1>
+        
+   
        <div className="">
               <MainCard />
             </div>
