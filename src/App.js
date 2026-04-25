@@ -14,6 +14,7 @@ import FashionHands from './Tv/Component/FashionHands/FashionHands';
 import Donate from './Tv/Component/Donate/Donate';
 import  Aboutusjan from './Component/Marke/Aboutusjan'
 import JanService from "./Component/Service/JanService"
+import ShaziienterprisesServices from './Component/Service/shaziienterprisesServices'
 function App() {
   return (
     <div>
@@ -28,6 +29,13 @@ function App() {
         <Route path='/Donate' element={<Donate />}/>
         <Route path='/Aboutusjan' element={<Aboutusjan />}/>
         <Route path='/JanService' element={<JanService />}/>
+      <Route
+          path="/shaziienterprisesServices"
+          element={<ShaziienterprisesServices />}
+        />
+
+
+        
 
         
 

@@ -55,7 +55,7 @@ function Hero() {
             </a>
           </li>
           <li>
-            <a href="/services" className="hover:text-pink-500 transition">
+            <a href="/shaziienterprisesServices" className="hover:text-pink-500 transition">
               Services
             </a>
           </li>
@@ -93,7 +93,7 @@ function Hero() {
             Home
           </a>
           <a
-            href="/services"
+            href="/shaziienterprisesServices"
             onClick={toggleMenu}
             className="text-white hover:text-pink-500 transition"
           >
