@@ -1,0 +1,150 @@
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Menu, X, Facebook, Twitter, Instagram, Youtube, Send } from "lucide-react";
+
+import logo from "../../Assets/logo.png";
+import Marketoos from '../../Assets/JAN&SONSTILES.png';
+import Vision from '../../Assets/Vision.png';
+import missing from '../../Assets/missing.png';
+import gaol from '../../Assets/gaol.png';
+
+import line from '../../Assets/32.png';
+import Footer from '../ItemCard/footer';
+import JonSonsTiles from './JonSonsTile';
+import UISection from './UISection';
+
+
+
+function Aboutusjan() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const links = [
+    { name: "Home", path: "/" },
+    { name: "Services", path: "/services" },
+    { name: "About Us", path: "/Aboutusjan" },
+  ];
+
+  const cards = [
+  {
+    title: "Vision",
+    desc: "To innovate, inspire, and deliver excellence across multiple industries.",
+    icon: Vision,
+  },
+  {
+    title: "Mission",
+    desc: "To become a leading enterprise in Pakistan through quality and innovation.",
+    icon: missing,
+    highlight: true, // 👈 mark middle card
+  },
+  {
+    title: "Goal",
+    desc: "Our goal is to continuously expand our business ventures.",
+    icon: gaol
+  },
+];
+
+  return (
+    <>
+      <nav className="bg-[#fff]">
+        <div className="max-w-7xl mx-auto h-36 flex items-center justify-between px-6 py-4">
+          {/* Logo */}
+          <div className="flex items-center gap-2">
+            <div className="navbar_logo">
+              <img src={logo} alt="Shazii Enterprises Logo" className="w-28 h-auto" />
+            </div>
+          </div>
+
+          {/* Desktop Menu */}
+          <ul className="hidden md:flex items-center gap-8">
+            {links.map((link) => (
+              <li key={link.name}>
+                <Link
+                  to={link.path}
+                  className={`text-gray-700 font-medium px-4 py-2 rounded-lg transition-all duration-300 ${
+                    link.name === "About Us"
+                      ? "text-[#DD9E9B] bg-[#F9F9F9] shadow-[0_2px_7px_rgba(0,0,0,0.05)]"
+                      : "hover:text-[#DD9E9B]"
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden bg-white rounded-full shadow-md p-3 hover:shadow-lg transition-all"
+          >
+            {isOpen ? <X className="w-5 h-5 text-gray-700" /> : <Menu className="w-5 h-5 text-gray-700" />}
+          </button>
+        </div>
+
+      {isOpen && (
+  <div className="md:hidden fixed top-0 left-0 w-full h-full  p-6 z-50 overflow-auto">
+    <ul className="flex flex-col gap-4 text-center mt-36">
+      {links.map((link) => (
+        <li key={link.name}>
+          <Link
+            to={link.path}
+            onClick={() => setIsOpen(false)}
+            className={`block text-gray-700 font-medium px-4 py-2 rounded-xl transition-all duration-300 ${
+              link.name === "About Us"
+                ? "text-rose-500 shadow-[0_4px_12px_rgba(197,102,136,0.3)]"
+                : "hover:text-rose-400"
+            }`}
+          >
+            {link.name}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  </div>
+)}
+
+
+      </nav>
+       <div className=' mx-12'>
+        <JonSonsTiles/>
+        </div>
+        <UISection/>
+<div className="flex flex-row items-center gap-2 px-10">
+  <h3 className="font-semibold text-lg">Contact Us Today</h3>
+  <p className="text-sm text-gray-500">
+    and experience the Shazii Enterprise difference!
+  </p>
+</div>
+         <div className="flex  justify-between items-center gap-8 ">
+
+
+      {cards.map((card, index) => (
+        <div
+          key={index}
+          className={`relative  rounded-2xl   transition-all duration-300
+          `}
+        >
+          {/* Icon */}
+          <div
+            className={` mb-4 flex items-center justify-between rounded-full
+           `}
+          >
+            <img
+              src={card.icon}
+              alt={card.title}
+              className={'h-[600] w-80'}
+            />
+          </div>
+
+    
+        </div>
+      ))}
+    </div>
+        <Footer/>
+     
+      
+    </>
+  );
+}
+
+export default Aboutusjan;

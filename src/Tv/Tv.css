@@ -1,0 +1,54 @@
+.martketoos_container{
+    background-image: url('../Assets/bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 700px;
+    display: flex;
+    justify-content: space-between;
+}
+.marketoos_contain{
+    margin: 40px 200px;
+    text-align: center;
+}
+.marketoos_contain h2{
+    font-size: 40px;
+}
+.marketoos_contain p{
+    font-size: 18px ;
+}
+.marketoos_contain button{
+    padding: 20px 40px;
+    border-radius: 60px;
+    background-color: #00695B;
+    border: none;
+    color: #FFF;
+}
+.market_main{
+    font-size: 48px;
+    padding-top: 20px;
+    text-align: center;
+}
+.market_component{
+    background-color: #ECE9E9;
+    /* padding: 10px auto; */
+}
+
+@media screen and (max-width: 851px) {
+    .marketoos_contain{
+        margin: auto;
+        padding-left: 20px !important; 
+        padding-right: 20px !important; 
+    }
+    .marketoos_contain h2 {
+        font-size: 30px;
+        line-height: 35px;
+    }
+    .marketoos_contain p {
+        font-size: 15px;
+    }
+    .market_main {
+        font-size: 38px;
+        margin: 10px;
+    }
+}

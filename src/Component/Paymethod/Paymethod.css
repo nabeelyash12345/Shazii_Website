@@ -1,0 +1,53 @@
+.pay_container{
+    display: flex;
+    justify-content: space-between;
+}
+.pay_icon{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #F5F4F8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 10px;
+}
+.pay_profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.pay_profile h3{
+    font-size: 16px;
+    margin-top: -1px;
+}
+.pay_profile img{
+    height: 50px;
+    width: 50px;
+    margin: auto 20px;
+}
+.pay_img{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.pay_img img{
+    width: 50%;
+}
+.easy{
+    display: flex;
+    width: 50%;
+    border-radius: 14px;
+    background-color: #FFFFFF;
+    box-shadow:  3px 3px #CACACA;
+    border: 1px solid #CACACA;
+}
+.next{
+    padding: 6px 60px;
+    background-color: #00695B;
+    color: #FFF;
+    border-radius: 8px ;
+    border: none;
+}
