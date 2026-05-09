@@ -6,7 +6,7 @@ import { Send } from "lucide-react";
 import companylogo from "../../../Assets/event.png";
 import button from "../../../Assets/buutton.png";
 
-export default function Eventmain() {
+export default function SubHandCraft() {
   const [email, setEmail] = useState("");
 
   return (

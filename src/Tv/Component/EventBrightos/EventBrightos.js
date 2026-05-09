@@ -4,9 +4,6 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import { Link, NavLink } from 'react-router-dom'
-
-
-
 import TUFFTILES from '../../../Assets/wed 1.png'
 import logo from '../../../Assets/Evenkog.png'
 import Navbar from '../../../Component/Navbar/Nav';
