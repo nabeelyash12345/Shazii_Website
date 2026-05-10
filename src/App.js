@@ -19,6 +19,7 @@ import HandCrafts from './Component/HandCrafts/HandCrafts';
 import SocialMasterClass from './Component/SocialMasterClass/SocialMasterClass';
 import AbooraChai from './Component/AbooraChai/AbooraChai';
 import EventHome from './Component/Marke/EventHome';
+// import Dummy from './Tv/Component/Dummy data/Dummy';
 function App() {
   return (
     <div>
@@ -37,7 +38,7 @@ function App() {
         <Route path='/SocialMasterClass' element={<SocialMasterClass />}/>
         <Route path='/AbooraChai' element={<AbooraChai />}/>
         <Route path='/EventHome' element={<EventHome />}/>
-
+        {/* <Route path='/Dummy' element={<Dummy />}/> */}
 
       <Route
           path="/shaziienterprisesServices"
